@@ -1,7 +1,13 @@
 const fetch = require('snekfetch')
-const RESTManager = require('./managers/RESTManager')
-
+const Constants = require('./misc/Constants')
 
 class DBL {
-  new Promise()
+  postCount(options = {}) {
+    if (!options.token || !options.servercount) { 
+      return throw new RangeError("Missing Parameters.")
+      process.exit(666);
+    }
+    
+    fetch.post(`https://${Constants.SCP}`)
+  }
 }
