@@ -8,7 +8,7 @@ class DBL {
   */
   postCount(options = {}, callback) {
     if (!this.options.token || !this.options.servercount || !this.options.botid || !this.callback) { 
-      return throw new RangeError("Missing Parameters.")
+      throw new RangeError("Missing Parameters.")
       process.exit(666);
     }
     
