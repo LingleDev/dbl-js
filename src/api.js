@@ -24,7 +24,7 @@ class DBL {
   }
   
   getUser(id, callback) {
-    if (!this.id || !this.callback) throw new RangeError("Missing Parameters.");
+    if (!this.id || !this.callback) throw new RangeError("Missing Parameters.") && process.exit(666);
     fetch.get(`https://${APIURL}/users/${id}`)
     .then(r => {
       const json = {
