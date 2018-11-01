@@ -1,5 +1,5 @@
 const fetch = require('snekfetch')
-const Constants = require('./misc/Constants')
+const APIURL = "https://discordbots.org/api"
 
 class DBL {
   /** 
@@ -12,7 +12,7 @@ class DBL {
       process.exit(666);
     }
     
-    fetch.post(`https://${Constants.APIURL}/bot/${this.options.botid}/stats`)
+    fetch.post(`https://${APIURL}/bot/${this.options.botid}/stats`)
     .set("Authorization", this.options.token)
     .send({count: this.options.servercount})
     .then(r => {
@@ -25,7 +25,7 @@ class DBL {
   
   getUser(id, callback) {
     if (!this.id || !this.callback) throw new RangeError("Missing Parameters.");
-    fetch.get(`https://${Constants.APIURL}/users/${id}`)
+    fetch.get(`https://${APIURL}/users/${id}`)
     .then(r => {
       const json = {
         username: `${r.body.username}#${r.body.discriminator}`,
