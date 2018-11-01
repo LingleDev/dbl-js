@@ -2,8 +2,11 @@ const fetch = require('snekfetch')
 const Constants = require('./misc/Constants')
 
 class DBL {
+  /** 
+    @param {} [options]
+  */
   postCount(options = {}) {
-    if (!options.token || !options.servercount) { 
+    if (!this.options.token || !this.options.servercount) { 
       return throw new RangeError("Missing Parameters.")
       process.exit(666);
     }
