@@ -11,9 +11,9 @@ class DBL {
       throw new RangeError("Missing Parameters.");
     }
     
-    fetch.post(`https://${APIURL}/bot/${this.options.botid}/stats`)
-    .set("Authorization", this.options.token)
-    .send({count: this.options.servercount})
+    fetch.post(`https://${APIURL}/bot/${options.botid}/stats`)
+    .set("Authorization", options.token)
+    .send({count: options.servercount})
     .then(r => {
       callback("Successfully posted your count to DBL.")
     })
