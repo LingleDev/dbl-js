@@ -3,7 +3,7 @@ const api = new (require('./src/api.js'))()
 const options = {
   token: process.env.token,
   servercount: 500,
-  botid: "294194506113220608"
+  botid: 294194506113220608
 }
 
 api.postCount(options, console.log)
