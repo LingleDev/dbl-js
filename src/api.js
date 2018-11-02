@@ -7,7 +7,7 @@ class DBL {
     @param {Function} [callback] The function to be executed once this function is finished.
   */
   postCount(options, callback) {
-    if (!this.options.token || !this.options.servercount || !this.options.botid || !this.callback) { 
+    if (!options.token || !options.servercount || !options.botid || !callback) { 
       throw new RangeError("Missing Parameters.");
     }
     
@@ -23,7 +23,7 @@ class DBL {
   }
   
   getUser(id, callback) {
-    if (!this.id || !this.callback) throw new RangeError("Missing Parameters.");
+    if (!id || !callback) throw new RangeError("Missing Parameters.");
     fetch.get(`https://${APIURL}/users/${id}`)
     .then(r => {
       const json = {
