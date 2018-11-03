@@ -13,7 +13,7 @@ class DBL {
     
     fetch.post(`https://discordbots.org/api/bots/stats`)
     .set("Authorization", options.token)
-    .send({count: options.servercount})
+    .send({server_count: options.servercount})
     .then(r => {
       callback("Successfully posted your count to DBL.")
     })
