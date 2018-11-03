@@ -7,7 +7,7 @@ class DBL {
   */
   postCount(options, callback) {
     const botid = options.botid
-    if (!options.token || !options.servercount || !botid || !callback) { 
+    if (!options.token || !options.servercount || !callback) { 
       throw new RangeError("Missing Parameters.");
     }
     
@@ -24,7 +24,7 @@ class DBL {
   
   getUser(id, callback) {
     if (!id || !callback) throw new RangeError("Missing Parameters.");
-    fetch.get(`https://${APIURL}/users/${id}`)
+    fetch.get(`https://discordbots.org/api/users/${id}`)
     .then(r => {
       const json = {
         username: `${r.body.username}#${r.body.discriminator}`,
