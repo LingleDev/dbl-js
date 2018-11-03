@@ -18,7 +18,7 @@ class DBL {
       callback("Successfully posted your count to DBL.")
     })
     .catch(err => {
-      callback(console.log(err))
+      callback(console.log(err)) 
     })
   }
   
