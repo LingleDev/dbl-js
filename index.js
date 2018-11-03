@@ -6,5 +6,5 @@ const options = {
   botid: 294194506113220608
 }
 
-api.getUser(140487710727995392, console.log)
+api.getUser("140487710727995392", console.log)
  
