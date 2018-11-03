@@ -7,11 +7,12 @@ class DBL {
     @param {Function} [callback] The function to be executed once this function is finished.
   */
   postCount(options, callback) {
-    if (!options.token || !options.servercount || !callback) { 
+    const botid = options.botid
+    if (!options.token || !options.servercount || !botid || !callback) { 
       throw new RangeError("Missing Parameters.");
     }
     
-    fetch.post(`${APIURL}/bots/stats`)
+    fetch.post(`${APIURL}/bots/${botid}/stats`)
     .set("Authorization", options.token)
     .send({count: options.servercount})
     .then(r => {
