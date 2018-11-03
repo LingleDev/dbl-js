@@ -3,7 +3,7 @@ const api = new (require('./src/api.js'))()
 const options = {
   token: process.env.token,
   servercount: 18,
-  botid: 294194506113220608
+  botid: "294194506113220608"
 }
 
 api.getUser("140487710727995392", console.log)
