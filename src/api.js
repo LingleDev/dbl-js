@@ -11,7 +11,7 @@ class DBL {
       throw new RangeError("Missing Parameters.");
     }
     
-    fetch.post(`https://discordbots.org/api/bots/stats`)
+    fetch.post(`https://discordbots.org/api/bots/${botid}/stats`)
     .set("Authorization", options.token)
     .send({count: options.servercount})
     .then(r => {
