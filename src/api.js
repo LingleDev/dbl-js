@@ -32,7 +32,7 @@ class DBL {
         admin: Boolean(r.body.admin),
         webMod: Boolean(r.body.webMod)
       }
-      callback(JSON.stringify(json))
+      callback(json)
     })
   }
   
