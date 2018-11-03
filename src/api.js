@@ -1,5 +1,4 @@
 const fetch = require('snekfetch')
-const APIURL = "https://discordbots.org/api"
 
 class DBL {
   /** 
@@ -12,7 +11,7 @@ class DBL {
       throw new RangeError("Missing Parameters.");
     }
     
-    fetch.post(`${APIURL}/bots/${botid}/stats`)
+    fetch.post(`https://discordbots.org/api/bots/stats`)
     .set("Authorization", options.token)
     .send({count: options.servercount})
     .then(r => {
